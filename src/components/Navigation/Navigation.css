@@ -1,0 +1,13 @@
+nav {
+    background-color: #fbfbfb;
+    padding-top: 1rem;
+    border-bottom: 0.2px solid #e1e1e1;
+    width: 100%;
+    position: fixed;
+    z-index: 6;
+}
+
+nav img {
+    width: 180px;
+    z-index: 100;
+}

@@ -1,38 +1,53 @@
+@font-face {
+  font-family: 'Beaufort for LOL';
+  src: url('./fonts/BeaufortforLOL-Heavy.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Beaufort for LOL';
+  src: url('./fonts/BeaufortforLOL-Medium.ttf') format('truetype');
+}
+
+:root {
+  --colorHeading: #32C8FF;
+  --colorButton: #32C8FF;
+  --colorSquare: #32C8FF;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainContent__container {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center; /* Wyśrodkowanie obrazu */
+  background-size: contain; /* Dopasowanie obrazu do wymiarów kontenera */
+  background-image: linear-gradient(rgba(249, 253, 255, 0.5), rgba(148, 235, 247, 0.5));
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainContent__container::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%; /* Ustaw szerokość na 100% */
+  height: 100%; /* Ustaw wysokość na 100% */
+  background: linear-gradient(
+  to left,
+  transparent 300px,
+  #c0c0c0 300px 301px,
+  transparent 301px 600px,
+  #c0c0c0 600px 601px,
+  transparent 601px 900px,
+  #c0c0c0 900px 901px,
+  transparent 901px 1200px
+);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+video {
+  width: 100%;
+  border: 0.8px solid #c0c0c0;
+  padding: 0.5rem;
 }
